@@ -40,14 +40,14 @@ div.dark h1, div.dark h2 {
 .centertext {
   text-align: center;     
 }  
-ul {
+.dark ul {
   list-style-type: none;    
   padding: 0px; 
 }
-div ul li p {
+div.dark ul li p {
   padding-left: 20px; 
 }
-div ul li ul li {
+div.dark ul li ul li {
   padding-left: 20px; 
 }
 
@@ -57,4 +57,8 @@ div ul li ul li {
 
 .light li:nth-child(even), .lightodd li:nth-child(odd) {
   background-color: #dedede; 
+}
+
+div.hidedeets ul li p {
+  display: none;
 }

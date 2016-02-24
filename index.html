@@ -87,8 +87,9 @@
       </table>    
     </div>
 
-    <div class="centerblock">    
+    <div class="centerblock" ng-class='{hidedeets: hidedeets}'>    
       <h2>Programming Projects:</h2>
+      <button ng-click="toggledeets()" class="btn btn-success btn-sm">Show Descriptions</button>
       <ul>
         <li>
           <a href="http://coolconfucius.github.io/vanillaCalculator/" target="_blank">
@@ -152,6 +153,22 @@
           </a>
           <p>Full stack product list app in Firebase, Mongoose, Express, jQuery, and Jade. The Product Wish List lets you keep track of items that you want to buy but not immediately, or items you're considering to buy. You can: Get an organized view of your list; Add items to your list; View showpages with details of your items; Remove items from your list; Update items on your list; Get a grand total price of your list; Filter and sort items on your list.</p>
         </li>
+
+        <li>
+          <a href="http://coolconfucius.github.io/to-watch-list/" target="_blank">
+            <h4>To Watch List</h4>
+          </a>
+          <p>App made in Angular. A tool to help users keep track of films they want to watch later. Can add, edit, remove, sort, and filter the films on the list. Data is stored in local storage.</p>
+        </li>
+
+        <li>
+          <a href="https://gametrade2016.herokuapp.com/" target="_blank">
+            <h4>Game Trading app</h4>
+          </a>
+          <p>Pair programmed App made in Mongoose with Firebase Authentication. Registered users can: post their games for trade; Select games that and offer games to trade; Accept or decline trades offered by other users.</p>
+        </li>
+
+
       </ul>
     </div>
 
@@ -160,7 +177,6 @@
       <ul ng-class='{light: !lightsout}'>
         <li><h4>Stock Tracker app in Angular using a stock API</h4></li>
         <li><h4>Property management app in Mongoose and Jade, Pair Programming</h4></li>
-        <li><h4>Fullstack Game Trading app in Mongoose with Firebase Authentication</h4></li>
         <li><h4>Films to Watch List app in Angular</h4></li>
         <li><h4>Mobile Wheather App in jQuery, Bootstrap, using a weather API</h4></li>
         <li><h4>Solved various programming challenges in JavaScript, C++, Python, and Java</h4></li>
