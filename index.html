@@ -12,16 +12,20 @@
 </head>
 <body ng-app="myApp" ng-controller="mainCtrl">
   <button ng-click="toggle()" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-adjust"></span></button>
+  <button ui-sref="home" class="btn btn-primary btn-sm">Home</button>
+
+
+
   <div class="container" ng-class="{dark: lightsout}">
     <div class="centerblock centertext">
       <div ng-if="!lightsout" class="jumbotron text-center">
         <h1><b>Benjamin Huang</b></h1>
       </div>
-      <h1 ng-if="lightsout"><b>Benjamin Huang</b></h1>
+      <h1 ng-if="lightsout"><b>Benjamin Huang, Full-Stack JavaScript Developer</b></h1>
       <p>benjaminthuang@gmail.com</p>
       <a href="https://github.com/CoolConfucius" target="_blank">https://github.com/CoolConfucius</a>
     </div>
-    <!-- <br> -->
+    <br>
     <div class="centerblock centertext">
       <h2>Education and Experience: </h2>
       <h3>The Coding House Institute, Fremont, CA</h3>
@@ -42,8 +46,10 @@
       <table class="table">
         <thead>
           <tr>
-            <th><h4>Proficient in</h4></th>
-            <th><h4>Other skills </h4></th>
+            <th><h4> Proficient in</h4></th>
+            <th><h4></h4></th>
+            <th><h4> Other skills </h4></th>
+            <th><h4></h4></th>
           </tr>
         </thead>
         <tbody>
@@ -56,6 +62,10 @@
                 <li>jQuery</li>
                 <li>Bootstrap</li>
                 <li>Mongo DB</li>
+              </ul>
+            </td>
+            <td>
+              <ul ng-class='{lightodd: !lightsout}'>
                 <li>Express JS</li>
                 <li>Angular JS</li>
                 <li>Node JS</li>
@@ -65,7 +75,7 @@
               </ul>
             </td>
             <td>
-              <ul ng-class='{lightodd: !lightsout}'>
+              <ul ng-class='{light: !lightsout}'>
                 <li>React JS</li>
                 <li>Angular Fire</li>
                 <li>Passport</li>
@@ -73,6 +83,10 @@
                 <li>Ember JS</li>
                 <li>ZURB Foundation</li>
                 <li>C++</li>
+              </ul>
+            </td>
+            <td>
+              <ul ng-class='{lightodd: !lightsout}'>
                 <li>C</li>
                 <li>Assembly</li>
                 <li>SQL</li>
