@@ -89,7 +89,10 @@
 
     <div class="centerblock" ng-class='{hidedeets: hidedeets}'>    
       <h2>Programming Projects:</h2>
-      <button ng-click="toggledeets()" class="btn btn-success btn-sm">Show Descriptions</button>
+      <button ng-if="hidedeets" ng-click="toggledeets()" class="btn btn-success btn-sm">Show Descriptions</button>
+      <button ng-if="!hidedeets" ng-click="toggledeets()" class="btn btn-warning btn-sm">Hide Descriptions</button>
+      <button ng-if="!allprojects" ng-click="toggleprojects()" class="btn btn-success btn-sm">Show More Projects</button>
+      <button ng-if="allprojects" ng-click="toggleprojects()" class="btn btn-warning btn-sm">Show Less Projects</button>
       <ul>
         <li>
           <a href="https://tranquil-lake-86813.herokuapp.com/" target="_blank">
@@ -107,82 +110,12 @@
           <p>User plays against an AI with a standard deck of 52 cards. Face cards count as ten points. Player and AI can count an ace as 1 point or 11 points. Other cards are counted as their numeric value. Both players begin with two cards. User can choose to “hit”, add a card to their hand, or “stand”, take no cards. The player whose hand exceeds 21 is busted. When neither busts, the player with higher points win. Can also place bets. Wins and loses are stored in local storage.</p>
         </li>
         <li>
-          <a href="http://coolconfucius.github.io/vanillaCalculator/" target="_blank">
-            <h4>Calculator in jQuery</h4>
-          </a>
-          <a href="https://github.com/CoolConfucius/vanillaCalculator" target="_blank" class="btn btn-sm" ng-class='{"btn-info": !lightsout, "btn-default": lightsout}'>View on GitHub</a>
-          <p>Does addition, subtraction, multiplication, and division operations. Can insert decimal numbers and toggle between positive and negative numbers. Allows chain operations. </p>
-        </li>
-        <li>
-          <a href="http://coolconfucius.github.io/TowersOfHanoi/" target="_blank">
-            <h4>Towers of Hanoi Game in jQuery</h4>
-          </a>
-          <a href="https://github.com/CoolConfucius/TowersOfHanoi" target="_blank" class="btn btn-sm" ng-class='{"btn-info": !lightsout, "btn-default": lightsout}'>View on GitHub</a>
-          <p>Begins with three stacks: the first one full with ordered disks and the other two empty. User can only move the top disk of a stack to the top of another stack. No disk can be placed on top of a smaller disk. User wins by moving all the disks to the third stack. Has a reset button. Can toggle the difficulty level (number of disks to play with). </p>
-        </li>
-        <li>
-          <a href="http://coolconfucius.github.io/MemoryMatchGame/" target="_blank">
-            <h4>Memory Match Game in jQuery</h4>
-          </a>
-          <a href="https://github.com/CoolConfucius/MemoryMatchGame" target="_blank" class="btn btn-sm" ng-class='{"btn-info": !lightsout, "btn-default": lightsout}'>View on GitHub</a>
-          <p>16 cards faced down. Each card has a matching pair. Click a card to flip it. Win by finding all the matches.</p>
-        </li>
-        
-        <li>
-          <a href="http://coolconfucius.github.io/TicTacToe2/" target="_blank">
-            <h4>Two Player Tic Tac Toe in jQuery</h4>
-          </a>
-          <a href="https://github.com/CoolConfucius/TicTacToe2" target="_blank" class="btn btn-sm" ng-class='{"btn-info": !lightsout, "btn-default": lightsout}'>View on GitHub</a>
-          <p>In a 3x3 grid, two users, take turns marking their symbol on the grid by clicking. The user who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins. </p>
-        </li>
-        <li>
-          <a href="http://coolconfucius.github.io/FirebaseTicTacToe/" target="_blank">
-            <h4>Real-time two player Tic Tac Toe in jQuery and Firebase</h4>
-          </a>
-          <a href="https://github.com/CoolConfucius/FirebaseTicTacToe" target="_blank" class="btn btn-sm" ng-class='{"btn-info": !lightsout, "btn-default": lightsout}'>View on GitHub</a>
-          <p>Game only starts when there are two players. Only two players may play in one game. Standard Tic Tac Toe rules are applied.</p>
-        </li>
-        <li>
-          <a href="https://starwarscollector.herokuapp.com/" target="_blank">
-            <h4>Star Wars Collector</h4>
-          </a>
-          <a href="https://github.com/CoolConfucius/StarWarsCollector" target="_blank" class="btn btn-sm" ng-class='{"btn-info": !lightsout, "btn-default": lightsout}'>View on GitHub</a>
-          <p>An app built with Firebase Authentication, Mongo, and a Star Wars API. Register, login, find your favorite Star Wars characters and add them to your collection</p>
-        </li>
-
-        <li>
-          <a href="http://coolconfucius.github.io/angular-stock-tracker/" target="_blank">
-            <h4>Stock Tracker app in Angular using a stock API</h4>
-          </a>
-          <a href="https://github.com/CoolConfucius/angular-stock-tracker" target="_blank" class="btn btn-sm" ng-class='{"btn-info": !lightsout, "btn-default": lightsout}'>View on GitHub</a>
-          <p>Uses Markit on Demand, a stock API. Users can search for symbols, add symbols, get stock information on tracked symbols, and untrack symbols. Data is stored in local storage. </p>
-        </li>
-
-
-        <li>
           <a href="http://coolconfucius.github.io/BattleShip/bs.html" target="_blank">
             <h4>Single Player Battleship against AI in jQuery</h4>
           </a>
           <a href="https://github.com/CoolConfucius/BattleShip" target="_blank" class="btn btn-sm" ng-class='{"btn-info": !lightsout, "btn-default": lightsout}'>View on GitHub</a>
           <p>Two 10x10 grids. User places 5 ships of lengths—2, 3, 3, 4, 5 squares—onto their grid. May place the ships horizontally or vertically. On the other grid, the AI has 5 ships of the same lengths placed randomly. All ships must be within their grids and not overlap. AI’s ships are hidden from the user.  User and AI take turns hitting a square on each other’s grid. When a ship is hit, the square is marked as hit. Else, the square is marked as miss. The player who sinks all their opponent’s ships wins.</p>
         </li>
-        <li>
-          <a href="http://coolconfucius.github.io/ContactList/" target="_blank">
-            <h4>Contact List app in jQuery, Bootstrap</h4>
-          </a>
-          <a href="https://github.com/CoolConfucius/ContactList" target="_blank" class="btn btn-sm" ng-class='{"btn-info": !lightsout, "btn-default": lightsout}'>View on GitHub</a>
-          <p>Add contacts to your list. Remove and edit them. Sort by clicking the headers. Click the same header again to reverse the order. Filter by contact category.</p>
-        </li>
-
-
-        <li>
-          <a href="http://coolconfucius.github.io/to-watch-list/" target="_blank">
-            <h4>Films to Watch List app in Angular</h4>
-          </a>
-          <a href="https://github.com/CoolConfucius/to-watch-list" target="_blank" class="btn btn-sm" ng-class='{"btn-info": !lightsout, "btn-default": lightsout}'>View on GitHub</a>
-          <p>A tool to help users keep track of films they want to watch later. Can add, edit, remove, sort, and filter the films on the list. Data is stored in local storage.</p>
-        </li>
-
         <li>
           <a href="https://gametrade2016.herokuapp.com/" target="_blank">
             <h4>Game Trading app</h4>
@@ -206,6 +139,76 @@
           <a href="https://github.com/CoolConfucius/WeatherApp" target="_blank" class="btn btn-sm" ng-class='{"btn-info": !lightsout, "btn-default": lightsout}'>View on GitHub</a>
           <p>Search for a location by entering a state and city or a zipcode. Gets forecast information from Wunderground, a weather API. Search history is saved in local storage.</p>
         </li>
+        <li>
+          <a href="http://coolconfucius.github.io/FirebaseTicTacToe/" target="_blank">
+            <h4>Real-time two player Tic Tac Toe in jQuery and Firebase</h4>
+          </a>
+          <a href="https://github.com/CoolConfucius/FirebaseTicTacToe" target="_blank" class="btn btn-sm" ng-class='{"btn-info": !lightsout, "btn-default": lightsout}'>View on GitHub</a>
+          <p>Game only starts when there are two players. Only two players may play in one game. Standard Tic Tac Toe rules are applied.</p>
+        </li>
+
+        <li>
+          <a href="http://coolconfucius.github.io/angular-stock-tracker/" target="_blank">
+            <h4>Stock Tracker app in Angular using a stock API</h4>
+          </a>
+          <a href="https://github.com/CoolConfucius/angular-stock-tracker" target="_blank" class="btn btn-sm" ng-class='{"btn-info": !lightsout, "btn-default": lightsout}'>View on GitHub</a>
+          <p>Uses Markit on Demand, a stock API. Users can search for symbols, add symbols, get stock information on tracked symbols, and untrack symbols. Data is stored in local storage. </p>
+        </li>
+        <li ng-if="allprojects">
+          <a href="http://coolconfucius.github.io/vanillaCalculator/" target="_blank">
+            <h4>Calculator in jQuery</h4>
+          </a>
+          <a href="https://github.com/CoolConfucius/vanillaCalculator" target="_blank" class="btn btn-sm" ng-class='{"btn-info": !lightsout, "btn-default": lightsout}'>View on GitHub</a>
+          <p>Does addition, subtraction, multiplication, and division operations. Can insert decimal numbers and toggle between positive and negative numbers. Allows chain operations. </p>
+        </li>
+        <li ng-if="allprojects">
+          <a href="http://coolconfucius.github.io/TowersOfHanoi/" target="_blank">
+            <h4>Towers of Hanoi Game in jQuery</h4>
+          </a>
+          <a href="https://github.com/CoolConfucius/TowersOfHanoi" target="_blank" class="btn btn-sm" ng-class='{"btn-info": !lightsout, "btn-default": lightsout}'>View on GitHub</a>
+          <p>Begins with three stacks: the first one full with ordered disks and the other two empty. User can only move the top disk of a stack to the top of another stack. No disk can be placed on top of a smaller disk. User wins by moving all the disks to the third stack. Has a reset button. Can toggle the difficulty level (number of disks to play with). </p>
+        </li>
+        <li ng-if="allprojects">
+          <a href="http://coolconfucius.github.io/MemoryMatchGame/" target="_blank">
+            <h4>Memory Match Game in jQuery</h4>
+          </a>
+          <a href="https://github.com/CoolConfucius/MemoryMatchGame" target="_blank" class="btn btn-sm" ng-class='{"btn-info": !lightsout, "btn-default": lightsout}'>View on GitHub</a>
+          <p>16 cards faced down. Each card has a matching pair. Click a card to flip it. Win by finding all the matches.</p>
+        </li>
+        
+        <li ng-if="allprojects">
+          <a href="http://coolconfucius.github.io/TicTacToe2/" target="_blank">
+            <h4>Two Player Tic Tac Toe in jQuery</h4>
+          </a>
+          <a href="https://github.com/CoolConfucius/TicTacToe2" target="_blank" class="btn btn-sm" ng-class='{"btn-info": !lightsout, "btn-default": lightsout}'>View on GitHub</a>
+          <p>In a 3x3 grid, two users, take turns marking their symbol on the grid by clicking. The user who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins. </p>
+        </li>
+        <li ng-if="allprojects">
+          <a href="https://starwarscollector.herokuapp.com/" target="_blank">
+            <h4>Star Wars Collector</h4>
+          </a>
+          <a href="https://github.com/CoolConfucius/StarWarsCollector" target="_blank" class="btn btn-sm" ng-class='{"btn-info": !lightsout, "btn-default": lightsout}'>View on GitHub</a>
+          <p>An app built with Firebase Authentication, Mongo, and a Star Wars API. Register, login, find your favorite Star Wars characters and add them to your collection</p>
+        </li>
+
+
+        <li ng-if="allprojects">
+          <a href="http://coolconfucius.github.io/ContactList/" target="_blank">
+            <h4>Contact List app in jQuery, Bootstrap</h4>
+          </a>
+          <a href="https://github.com/CoolConfucius/ContactList" target="_blank" class="btn btn-sm" ng-class='{"btn-info": !lightsout, "btn-default": lightsout}'>View on GitHub</a>
+          <p>Add contacts to your list. Remove and edit them. Sort by clicking the headers. Click the same header again to reverse the order. Filter by contact category.</p>
+        </li>
+
+
+        <li ng-if="allprojects">
+          <a href="http://coolconfucius.github.io/to-watch-list/" target="_blank">
+            <h4>Films to Watch List app in Angular</h4>
+          </a>
+          <a href="https://github.com/CoolConfucius/to-watch-list" target="_blank" class="btn btn-sm" ng-class='{"btn-info": !lightsout, "btn-default": lightsout}'>View on GitHub</a>
+          <p>A tool to help users keep track of films they want to watch later. Can add, edit, remove, sort, and filter the films on the list. Data is stored in local storage.</p>
+        </li>
+
 
 
       </ul>

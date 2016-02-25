@@ -22,5 +22,10 @@ app.controller('mainCtrl', function($scope) {
   $scope.toggledeets = function(){
     $scope.hidedeets = !$scope.hidedeets; 
   }
+
+  $scope.allprojects = false; 
+  $scope.toggleprojects = function(){
+    $scope.allprojects = !$scope.allprojects; 
+  }
   
 }); 
