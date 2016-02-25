@@ -1,7 +1,7 @@
 body {
   font-family: Helvetica, sans-serif, Arial, "Times New Roman";  
 }
-p, a {
+p, a, span {
   font-size: 16px; 
 }
 div.dark {
@@ -15,7 +15,7 @@ div.dark {
     1px 0px 1px yellow, 0px 1px 1px yellow,   
     -1px -0px 1px yellow, -0px -1px 1px yellow, 
 }*/
-div.dark, div.dark div {
+div.dark, div.dark > div {
   background: linear-gradient(to bottom, #000000, #221100);
   padding: 10px; 
   /*margin: 0px; */
@@ -28,13 +28,22 @@ div.dark, div.dark div {
 div.dark h1, div.dark h2 {
   color: #333;
   text-shadow: 
-    1px 0px 2px yellow, 0px 1px 2px yellow, 
-    2px 1px 2px yellow, 1px 2px 2px yellow,
-    3px 2px 2px yellow, 2px 3px 2px yellow,    
-    -1px -0px 2px yellow, -0px -1px 2px yellow, 
-    -2px -1px 2px yellow, -1px -2px 2px yellow,
-    -3px -2px 2px yellow, -2px -3px 2px yellow
+    1px 0px 5px yellow, 0px 1px 5px yellow, 
+    2px 1px 5px yellow, 1px 2px 5px yellow,    
+    -1px -0px 5px yellow, -0px -1px 5px yellow, 
+    -2px -1px 5px yellow, -1px -2px 5px yellow
 }
+div.dark h1:hover, div.dark h2:hover {
+  color: #333;
+  text-shadow: 
+    1px 0px 5px yellow, 0px 1px 5px yellow, 
+    2px 1px 5px yellow, 1px 2px 5px yellow,
+    3px 2px 5px yellow, 2px 3px 5px yellow,    
+    -1px -0px 5px yellow, -0px -1px 5px yellow, 
+    -2px -1px 5px yellow, -1px -2px 5px yellow,
+    -3px -2px 5px yellow, -2px -3px 5px yellow
+}
+
 .centerblock {
   margin-left: auto; 
   margin-right: auto; 
